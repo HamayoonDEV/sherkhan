@@ -1,0 +1,59 @@
+/* Contect.css */
+
+.content {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f7fa, #e6e9f0);
+    padding: 2em;
+    text-align: center;
+  }
+  
+  .content h1 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #2c3e50;
+  }
+  .phone{
+    font-size: 60px;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 4em; /* Adjust the gap depending on the new icon size */
+  }
+  
+  .icons a {
+    color: #2c3e50;
+    transition: color 0.4s ease, transform 0.4s ease;
+  }
+  
+  .icons a:hover {
+    color: #e74c3c;
+    transform: translateY(-5px);
+  }
+  
+  .icons a .MuiSvgIcon-root {
+    font-size: 4rem; /* Increased icon size */
+  }
+  
+  /* For smaller screen sizes */
+  @media (max-width: 768px) {
+    .content h1 {
+      font-size: 2em;
+    }
+  
+    .icons {
+      flex-direction: column;
+      align-items: center;
+      gap: 2em;
+    }
+  
+    .icons a .MuiSvgIcon-root {
+      font-size: 3.5rem; /* Slightly reduced size for mobile views */
+    }
+  }
+  

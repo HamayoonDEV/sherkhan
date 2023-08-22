@@ -1,0 +1,77 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.home {
+    display: flex;
+    background-color: #FFFAFA;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    animation: fadeIn 1.5s ease-in-out;
+    flex-direction: column;  /* default to column for mobile first */
+}
+
+.image img {
+    height: 60vw;  /* using viewport width for scalability */
+    width: 60vw;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+    max-height: 400px;  /* limit size for larger screens */
+    max-width: 400px;
+}
+
+.image img:hover {
+    transform: scale(1.05);
+}
+
+.about {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    width: 90%;  /* set width to adapt to mobile screens */
+}
+
+.about:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: rgba(255, 250, 250, 0.9);
+}
+
+.about p {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* Tablet and above */
+@media (min-width: 768px) {
+    .home {
+        flex-direction: row;  /* back to row for larger screens */
+        gap: 8rem;
+    }
+    
+    .image img {
+        height: 50vw;
+        width: 50vw;
+        
+    }
+}
+
+/* Desktop and above */
+@media (min-width: 1024px) {
+    .image img {
+        height: 400px;
+        width: 400px;
+    }
+
+    .about {
+        width: auto;  /* let the content define the width */
+    }
+}

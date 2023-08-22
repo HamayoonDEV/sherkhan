@@ -1,0 +1,40 @@
+/* Tools.css */
+
+.Tools {
+    font-family: 'Arial', sans-serif; /* or any other preferred font-family */
+    text-align: center; /* Centering the title and images */
+    padding: 2em; /* Giving some space around */
+    height: 100vh; /* Full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centering everything */
+    align-items: center;
+  }
+  
+  .Tools h1 {
+    margin-bottom: 2em; /* Spacing between title and images */
+  }
+  
+  .Tools a {
+    text-decoration: none; /* Removing any underlines from links */
+    margin: 0 1em; /* Giving a little space between images when side by side */
+    display: inline-block; /* Making the links inline but blocky for margins */
+  }
+  
+  .Tools img {
+    max-width: 150px; /* Setting a maximum size to images */
+    transition: transform 0.3s ease; /* Smooth zoom on hover */
+  }
+  
+  .Tools img:hover {
+    transform: scale(1.1); /* Slightly zooming in on hover */
+  }
+  
+  /* Responsive Breakpoint */
+  @media (max-width: 768px) {
+    .Tools a {
+      display: block; /* Each image link on its own line on smaller screens */
+      margin: 1em auto; /* Centering and adding vertical spacing */
+    }
+  }
+  

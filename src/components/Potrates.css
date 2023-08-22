@@ -1,0 +1,66 @@
+/* Potrates.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Raleway&display=swap');
+
+.potrates {
+  font-family: 'Raleway', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Subtle background gradient */
+  padding: 4em 0;
+  animation: fadeIn 1.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.potrates h1 {
+  font-size: 2.5em;
+  margin-bottom: 2em;
+  color: #333;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1); /* Text shadow for the heading */
+}
+
+.Portrait {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2em;
+}
+
+.Portrait a {
+  display: block;
+  overflow: hidden;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Drop shadow for depth */
+  transition: box-shadow 0.5s ease; /* Transition for hover effect on shadow */
+}
+
+.Portrait img {
+  width: 100%;
+  transition: transform 0.5s ease;
+  border-radius: 15px; /* Consistency with the anchor's border-radius */
+}
+
+.Portrait a:hover {
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.Portrait a:hover img {
+  transform: scale(1.1);
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .potrates h1 {
+    font-size: 2em;
+  }
+
+  .Portrait {
+    gap: 1.5em;
+  }
+}

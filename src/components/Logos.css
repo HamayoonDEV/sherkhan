@@ -1,0 +1,57 @@
+/* Logos.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Lato:wght@300&display=swap');
+
+.logos {
+  font-family: 'Lato', sans-serif;
+  background: #f8f9fa; /* Light grey background for contrast */
+  padding: 4em 0;
+  text-align: center;
+}
+
+.logos h1 {
+  font-size: 2.5em;
+  margin-bottom: 2.5em;
+  color: #2c3e50;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.Portrait {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3em;
+}
+
+.Portrait a {
+  display: block;
+  overflow: hidden;
+  border-radius: 20px; /* Slight rounding for a modern touch */
+}
+
+.Portrait img {
+  max-width: 200px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.Portrait a:hover img {
+  transform: scale(1.05); /* Gentle pop effect on hover */
+  box-shadow: 0px 12px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .logos h1 {
+    font-size: 2em;
+    margin-bottom: 1.5em;
+  }
+
+  .Portrait {
+    gap: 2em;
+  }
+
+  .Portrait img {
+    max-width: 150px;
+  }
+}
